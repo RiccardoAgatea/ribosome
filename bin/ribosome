@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'ribosome'
+
+Ribosome::Main.start ARGV
