@@ -12,7 +12,7 @@ module Ribosome
         option :gene, default: DEFAULT_GENE_PATH
 
         execute do |name|
-          # TODO
+          Ribosome.new(options[:gene], project_name: name).synthesize
         end
       end
     end
