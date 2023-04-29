@@ -9,6 +9,8 @@ module Ribosome
         description 'Generates a new project'
         long_description nil
 
+        option :gene, default: DEFAULT_GENE_PATH
+
         execute do |name|
           # TODO
         end
