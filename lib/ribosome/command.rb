@@ -2,9 +2,6 @@ require 'active_support/core_ext/string/inflections'
 
 module Ribosome
   class Command
-    NOT_PROVIDED = ::Object.new
-    private_constant :NOT_PROVIDED
-
     {
       usage:                    nil,
       description:              nil,
