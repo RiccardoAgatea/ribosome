@@ -50,7 +50,7 @@ module Ribosome
       end.join(' ')
 
       if ::Ribosome.sandbox?
-        puts "Running #{command_string}"
+        puts "Running: #{command_string}"
       else
         `#{command_string}`
       end
