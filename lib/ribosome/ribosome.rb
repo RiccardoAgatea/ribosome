@@ -1,5 +1,3 @@
-require_relative 'ribosome/has_commands'
-
 module Ribosome
   class Ribosome
     attr_reader :gene
