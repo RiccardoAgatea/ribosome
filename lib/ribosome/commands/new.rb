@@ -10,7 +10,7 @@ module Ribosome
         long_description nil
 
         option :gene, default: DEFAULT_GENE_PATH
-        option :sandbox, default: false
+        option :sandbox, type: :boolean, default: false
 
         execute do |name|
           ::Ribosome.sandbox! options[:sandbox]
