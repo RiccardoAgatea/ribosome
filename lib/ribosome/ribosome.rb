@@ -2,8 +2,6 @@ require_relative 'ribosome/has_commands'
 
 module Ribosome
   class Ribosome
-    include HasCommands
-
     attr_reader :gene
     attr_reader :m_rna
     attr_reader :project_name
@@ -24,8 +22,6 @@ module Ribosome
 
       @params = params.freeze
     end
-
-    alias executable command
 
     def synthesize
       instance_eval m_rna, gene
