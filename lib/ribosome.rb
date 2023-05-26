@@ -13,6 +13,16 @@ module Ribosome
   end
 
   DEFAULT_GENE_PATH = (Pathname(root) / 'vendor/assets/default_gene.rb').to_s
+
+  # rubocop:disable Style/OptionalBooleanParameter
+  def self.sandbox! new_value=true
+    @sandbox = new_value
+  end
+  # rubocop:enable Style/OptionalBooleanParameter
+
+  def self.sandbox?
+    @sandbox
+  end
 end
 
 require_relative 'ribosome/main'

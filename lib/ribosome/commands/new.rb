@@ -10,9 +10,12 @@ module Ribosome
         long_description nil
 
         option :gene, default: DEFAULT_GENE_PATH
+        option :sandbox, default: false
 
         execute do |name|
-          Ribosome.new(options[:gene], project_name: name).synthesize
+          ::Ribosome.sandbox! options[:sandbox]
+          params = options.except :gene
+          Ribosome.new(options[:gene], project_name: name, **params).synthesize
         end
       end
     end
